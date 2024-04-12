@@ -1,7 +1,7 @@
 <script setup>
 import MealItem from './MealItem.vue';
 
-const { meals } = defineProps({
+const { props } = defineProps({
     meals: {
         required: true,
         type: Array
