@@ -3,11 +3,12 @@ import useAPI from "@/composables/useAPI";
 const { api } = useAPI()
 
 export function searchMeals({ commit }, keyword) {
-    api.get(`search.php?=${keyword}`)
+    api.get(`search.php?name=${keyword}`)
         .then(({ data }) => {
-        commit('setSearchedmeals', data.meals)    
-    })
+            commit('setSearchedMeals', data.meals)    
+        })
 }
+
 
 export function searchMealsByLetter({ commit }, letter) {
     api.get(`search.php?f=${letter}`)
