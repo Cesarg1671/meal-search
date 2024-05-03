@@ -7,6 +7,7 @@ const { meal } = defineProps({
 })
 </script>
 
+
 <template>
     <div class="bg-white shadow rounded-xl">
         <router-link :to="{name:'MealDetails', params: {id: meal.idMeal}}">
